@@ -29,22 +29,28 @@ const styles = {
 			borderRadius: '8px',
 
 	},
-	stageContent: {
+	stages:{
 		display: 'flex',
-		width: 'calc(100% - 20px)',
+		flex: 1,
 		background: '#eee',
 		margin: '10px',
 		borderRadius: '8px',
-		height: 'calc(100vh - 80px)',
+		width: 'calc(100% - 20px)',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	stageContent: {
+		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
 		fontSize: "40px",
-		color: '#a1a1a1'
+		color: '#a1a1a1',
+		fontWeight: 700
 	},
 	stageButton: {
 		display: 'flex',
 		justifyContent: 'flex-end',
-		height: "80px",
+		height: "40px",
 		marginRight: "10px",
 		marginBottom: '10px'
 	},
