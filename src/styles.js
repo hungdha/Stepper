@@ -32,6 +32,7 @@ const styles = {
 	stages:{
 		display: 'flex',
 		flex: 1,
+		height: '100%',
 		background: '#eee',
 		margin: '10px',
 		borderRadius: '8px',
