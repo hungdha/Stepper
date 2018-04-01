@@ -47,6 +47,9 @@ export default class Progress extends Component {
 				<div style={circleStyle(stage, 3)}>
 					{renderIcon(stage, 3)}
 				</div>
+				<div style={circleStyle(stage, 4)}>
+					{renderIcon(stage, 4)}
+				</div>
 			</div>
     )
   }

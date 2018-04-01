@@ -3,7 +3,7 @@ import React from 'react';
 const styles = {
 	container: {
 		width: '40%',
-		height: 'calc(40vh)',
+		height: 'calc(45vh)',
 		display: 'flex'
 	},
 	progressContainer: {
@@ -31,17 +31,21 @@ const styles = {
 	},
 	stages:{
 		display: 'flex',
-		flex: 1,
-		height: '100%',
-		background: '#eee',
-		margin: '10px',
+		height: 'calc(100% - 20px)',
+		position: 'relative',
 		borderRadius: '8px',
 		width: 'calc(100% - 20px)',
-		justifyContent: 'center',
-		alignItems: 'center',
+		// justifyContent: 'center',
+		// alignItems: 'center',
 	},
 	stageContent: {
 		display: 'flex',
+		margin: '10px',
+		borderRadius: '8px',
+		width: 'calc(100%)',
+		height: '100%',
+		background: '#eee',
+		position: "absolute",
 		justifyContent: 'center',
 		alignItems: 'center',
 		fontSize: "40px",
@@ -52,12 +56,13 @@ const styles = {
 		display: 'flex',
 		justifyContent: 'flex-end',
 		height: "40px",
+		marginTop: "20px",
 		marginRight: "10px",
 		marginBottom: '10px'
 	},
 	circle: {
-		marginTop: "30px",
-		marginBottom: "30px",
+		marginTop: "20px",
+		marginBottom: "20px",
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',

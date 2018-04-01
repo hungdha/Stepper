@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styles from './styles';
-
-
 import Progress from './components/Progress';
 import Steps from './components/Steps';
 
