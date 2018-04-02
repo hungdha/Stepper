@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './styles';
-import Progress from './components/Progress';
-import Steps from './components/Steps';
+import Progress, {Stage} from './components/Progress';
+import Steps, {Step} from './components/Steps';
 
 
 class Stepper extends Component {
@@ -11,15 +11,21 @@ class Stepper extends Component {
 	static defaultProps = {
     stage: 1
   }
+	static Progress = Progress
+	static Steps = Steps
+	static Stage = Stage
+	static Step = Step
 	handleClick = () => {
 		this.setState({ stage: this.state.stage + 1 });
 	}
 	render() {
 		const { stage } = this.state;
+		const children = React.Children.map(this.props.children, child => {
+			return React.cloneElement(child, {stage, handleClick: this.handleClick})
+		})
 		return (
 			<div style={styles.container}>
-				<Progress stage={stage}/>
-				<Steps handleClick={this.handleClick} stage={stage}/>
+				{children}
 			</div>
 		);
 	}

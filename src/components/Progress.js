@@ -3,7 +3,7 @@ import HourGlass from '../animations/HourGlass.js'
 import styles from '../styles'
 
 
-const Stage = ({stage, num}) => (
+export const Stage = ({stage, num}) => (
 	<div style={circleStyle(stage, num)}>
 		{renderIcon(stage, num)}
 	</div>
@@ -42,14 +42,14 @@ const circleStyle = (current, circleSection) => {
 
 export default class Progress extends Component {
   render(){
-		const {stage} = this.props
+    const {stage} = this.props
+		const children = React.Children.map(this.props.children, child => {
+			return React.cloneElement(child, {stage})
+		})
     return(
-			<div style={styles.progressContainer}>
-				<Stage stage={stage} num={1} />
-				<Stage stage={stage} num={2} />
-				<Stage stage={stage} num={3} />
-				<Stage stage={stage} num={4} />
-			</div>
+      <div style={styles.progressContainer}>
+        {children}
+      </div>
     )
   }
 }
