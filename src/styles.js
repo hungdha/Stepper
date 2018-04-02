@@ -2,8 +2,8 @@ import React from 'react';
 
 const styles = {
 	container: {
-		width: '40%',
-		height: 'calc(45vh)',
+		width: 'calc(100% - 20px)',
+		height: 'calc(100vh - 20px)',
 		display: 'flex'
 	},
 	progressContainer: {
