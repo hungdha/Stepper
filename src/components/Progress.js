@@ -2,6 +2,13 @@ import React, {Component} from 'react';
 import HourGlass from '../animations/HourGlass.js'
 import styles from '../styles'
 
+
+const Stage = ({stage, num}) => (
+	<div style={circleStyle(stage, num)}>
+		{renderIcon(stage, num)}
+	</div>
+)
+
 const renderIcon = (stage, num) => {
 	if (stage === num) {
 		return <HourGlass size="30px" />;
@@ -21,7 +28,7 @@ const renderIcon = (stage, num) => {
 			</div>
 		);
 	}
-	return <img style={{ width: '12px' }} src="/icons/checked2.svg" />;
+	return <img className="animated fadeIn" style={{ width: '12px' }} src="/icons/checked2.svg" />;
 };
 
 const circleStyle = (current, circleSection) => {
@@ -38,18 +45,10 @@ export default class Progress extends Component {
 		const {stage} = this.props
     return(
 			<div style={styles.progressContainer}>
-				<div style={circleStyle(stage, 1)}>
-					{renderIcon(stage, 1)}
-				</div>
-				<div style={circleStyle(stage, 2)}>
-					{renderIcon(stage, 2)}
-				</div>
-				<div style={circleStyle(stage, 3)}>
-					{renderIcon(stage, 3)}
-				</div>
-				<div style={circleStyle(stage, 4)}>
-					{renderIcon(stage, 4)}
-				</div>
+				<Stage stage={stage} num={1} />
+				<Stage stage={stage} num={2} />
+				<Stage stage={stage} num={3} />
+				<Stage stage={stage} num={4} />
 			</div>
     )
   }

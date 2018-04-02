@@ -8,6 +8,9 @@ class Stepper extends Component {
 	state = {
 		stage: this.props.stage
 	}
+	static defaultProps = {
+    stage: 1
+  }
 	handleClick = () => {
 		this.setState({ stage: this.state.stage + 1 });
 	}

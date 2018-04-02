@@ -14,11 +14,15 @@ const styles = {
     borderRadius: '4px',
     border: '0px',
     color: 'white',
+		cursor: 'pointer',
     padding: '5px 15px 5px 15px',
     ':hover': {
       animation: 'x 0.8s ease',
       animationName: popAnimation
     },
+		':focus':{
+			outline: 'none'
+		},
     ':disabled': {
       background: '#ccc',
       color: "white",

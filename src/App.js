@@ -4,7 +4,9 @@ import Stepper from "./Stepper"
 class App extends Component {
   render() {
     return (
+      <div>
         <Stepper stage={1}/>
+      </div>
     );
   }
 }

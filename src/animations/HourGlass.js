@@ -38,7 +38,7 @@ class HourGlass extends React.Component {
   render(){
 
     return(
-        <div style={{marginTop: '2px'}}>
+        <div className="animated fadeIn" style={{marginTop: '2px'}}>
           <svg ref={(ref) => {this.hourGlass = ref;}} id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 252 362" style={{width: this.props.size,enableBackground:"new 0 0 252 362"}} xmlSpace="preserve">
           <style type="text/css">
