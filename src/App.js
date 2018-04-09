@@ -33,11 +33,15 @@ class App extends Component {
               <Stepper.Stage num={2} />
               <Stepper.Stage num={3} />
             </Stepper.Progress>
-            <Stepper.Steps>
-              <Stepper.Step num={1} text={"Stage 1"}/>
-              <Stepper.Step num={2} text={"Stage 2"}/>
-              <Stepper.Step num={3} text={"Stage 3"}/>
-            </Stepper.Steps>
+            <div style={{flex: 1, display: 'flex', flexDirection: 'column'}}>
+              <Stepper.Header title="Stepper Heading"/>
+              <Stepper.Steps>
+                <Stepper.Step num={1} text={"Stage 1"}/>
+                <Stepper.Step num={2} text={"Stage 2"}/>
+                <Stepper.Step num={3} text={"Stage 3"}/>
+              </Stepper.Steps>
+              <Stepper.Footer title="Stepper Footer"/>
+            </div>
           </Stepper>
         </StepperProvider>
     );

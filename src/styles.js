@@ -94,6 +94,18 @@ const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		paddingLeft: '15px'
+	},
+	footer: {
+		height: '30px',
+		marginLeft: "20px",
+		border: "2px solid #ccc",
+		borderRadius: '8px',
+		color: '#6bada7',
+		fontWeight: 700,
+		fontSize: '24px',
+		display: 'flex',
+		alignItems: 'center',
+		paddingLeft: '15px'
 	}
 }
 
