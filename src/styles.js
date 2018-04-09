@@ -24,14 +24,13 @@ const styles = {
 			flexDirection: 'column',
 			justifyContent: 'center',
 			margin: '15px 0px 15px 15px',
-			height: 'calc(100% - 20px)',
+			// height: 'calc(100% - 20px)',
 			border: "2px solid #ccc",
 			borderRadius: '8px',
-
 	},
 	stages:{
 		display: 'flex',
-		height: 'calc(100% - 20px)',
+		flex: 1,
 		position: 'relative',
 		borderRadius: '8px',
 		width: 'calc(100% - 20px)',
@@ -83,6 +82,19 @@ const styles = {
 	circleComplete: {
 		border: '3px solid #6bada7',
 	},
+	header: {
+		height: '60px',
+		marginLeft: "20px",
+		marginTop: "20px",
+		border: "2px solid #ccc",
+		borderRadius: '8px',
+		color: '#6bada7',
+		fontWeight: 700,
+		fontSize: '24px',
+		display: 'flex',
+		alignItems: 'center',
+		paddingLeft: '15px'
+	}
 }
 
 

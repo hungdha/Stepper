@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
 import HourGlass from '../animations/HourGlass.js'
 import styles from '../styles'
+import {StepperContext} from '../App'
 
+// export const Stage = ({stage, num}) => (
+// 	<div style={circleStyle(stage, num)}>
+// 		{renderIcon(stage, num)}
+// 	</div>
+// )
 
-export const Stage = ({stage, num}) => (
-	<div style={circleStyle(stage, num)}>
-		{renderIcon(stage, num)}
-	</div>
-)
+export const Stage = ({ num }) => (
+	<StepperContext.Consumer>
+		{value => (
+			<div style={circleStyle(value.stage, num)}>{renderIcon(value.stage, num)}</div>
+		)}
+	</StepperContext.Consumer>
+);
+
 
 const renderIcon = (stage, num) => {
 	if (stage === num) {
@@ -42,13 +51,9 @@ const circleStyle = (current, circleSection) => {
 
 export default class Progress extends Component {
   render(){
-    const {stage} = this.props
-		const children = React.Children.map(this.props.children, child => {
-			return React.cloneElement(child, {stage})
-		})
     return(
       <div style={styles.progressContainer}>
-        {children}
+        {this.props.children}
       </div>
     )
   }
